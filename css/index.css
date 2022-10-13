@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+body{
+    background: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+
+    
+    
+}
+
+header{
+    height: 130px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+
+.container__header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.logo img{
+    width: 180px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.menu nav ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #8C52FF;
+    transition: opacity 300ms;
+}
+
+.menu nav ul li a:hover{
+    opacity: 0.8;
+}
+
+.btn__header-register{
+    padding: 14px 50px;
+    border: none;
+    background: #8C52FF;
+    color:white;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background, color, 300ms;
+
+}
+.btn__header-register:hover{
+    background: #d895d8;
+    color:white;
+    border-radius: 5px;
+}
+
+#icon_menu{
+    display: none;
+}
+
+/*PORTADA - COVER*/
+
+main{
+    width: 100%;
+    height: 100vh;
+    max-height: 500px;
+    
+    padding: 20px;
+    margin-top: 20vh;
+    margin-bottom: 0%;
+    padding-bottom: 20%;
+
+    background-image: url("../assets/cover.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+   
+}
+
+.cover{
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+    margin-top: 50px;
+}
+
+.text__information-cover{
+    width: 100%;
+    box-sizing: content-box;
+    display: flex;  
+    flex-direction: column;
+    text-align: center;
+    margin-left: -22vw;
+    
+
+}
+
+.text__information-cover h1{
+    font-size: 2.5vw;
+    color: #545454;
+    
+}
+
+.text__information-cover p{
+    font-size: 1.3vw;
+    margin-top: 40px;
+    color: #545454;
+}
+
+
+/*Aquí debajo va el FOOTER*/
+
+footer{
+    width: 100%;
+    max-height: 350px;
+    height: 50%;
+    padding: 10px 0px;
+    background-color: #8C52FF;
+    margin-top: auto;
+    
+
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 600;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 16px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+    
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: white;
+}
+
+/* Icono wpp */
+.wasap{
+    
+    
+    position: fixed;
+    bottom: 10px;
+    right: 5px;    
+}
+.wasap:hover{
+    opacity: 0.9;
+}
+/* hasta aquí */
+
+
+/* Media Query */
+
+@media (max-width: 1024px){
+
+
+    
+    .container__header,
+    main{
+        padding: 20px;
+    }
+
+    #icon_menu{
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .header__register{
+        display: none;
+    }
+
+    .menu{
+        height: 0px;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+        transition: all 300ms;
+    }
+
+    .menu nav ul{
+        padding: 20px 0px;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    .menu nav ul li{
+        padding: 10px 40px;
+    }
+
+    .mostrar_menu{ /*CLASE MANIPULADA POR JS*/
+        height: 235px;
+    }
+
+ 
+}
+
+@media screen and (max-width:920px){
+   
+    .cover{
+    
+        display: flex;
+        
+        padding-top: 0px;
+        margin-top: 50px;
+    }
+    .text__information-cover h1{
+        font-size: 6vw;
+    }
+
+    .text__information-cover p{
+        font-size: 3vw;
+    }
+    
+    .container__footer{
+        width: 100%;
+        grid-template-columns: repeat (1, 1fr);
+        grid-gap: 30px;
+        padding: 0px 0px;
+        background-color: #8C52FF;
+    }
+    .box__copyright{
+
+        width: 100%;
+        grid-template-columns: repeat (1, 1fr);
+        grid-gap: 30px;
+        padding: 0px 0px;
+        padding-bottom: 10px;
+        background-color: #8C52FF;
+    }
+
+}
+
