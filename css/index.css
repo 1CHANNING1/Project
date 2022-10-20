@@ -121,7 +121,7 @@ main{
 }
 
 .text__information-cover h1{
-    font-size: 2.5vw;
+    font-size: 3vw;
     color: #545454;
     
 }
@@ -268,6 +268,7 @@ footer{
     .mostrar_menu{ /*CLASE MANIPULADA POR JS*/
         height: 235px;
     }
+
     .text__information-cover a{
         padding-top: 15px;
         display: block;
@@ -277,11 +278,11 @@ footer{
 @media screen and (max-width:920px){
    
     .text__information-cover h1{
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     .text__information-cover p{
-        font-size: 3vw;
+        display:none;
     }
     
     .container__footer{
@@ -303,3 +304,9 @@ footer{
 
 }
 
+@media screen and (max-width:500px){
+    .text__information-cover h1{
+        font-size: 6vw;
+    }
+
+}
