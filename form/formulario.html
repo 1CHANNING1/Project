@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="STYLESHEET" href="style.css">
+    <link rel="STYLESHEET" href="formulario.css">
     <title>Turnos</title>
     
     
@@ -11,43 +11,49 @@
   <body>
   
   <div id="form">
-    <form id="formulario" action="mailto:" method="post" enctype="text/plain">
+    <form class="formulario">
       <h1 class="formulario_titulo"> Complete el formulario a continuación para reservar su turno:</h1><br>
-      Nombre: <input type="text" id="nombre" size="30" maxlength="100">
-      Email: <input type="text" id="email" size="20" maxlength="100" value="@">
+      <label for="Nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$">
+      <label for="Email">Email:</label>      
+      <input type="text" id="email" name="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9]+(\.[a-z0-9]+)*(\.[a-z]{2,15})$">
       <br><br>
-      Edad: <input type="number" id="edad" size="20" min="13" max="99">
-      Sexo:
+      <label for="Edad">Edad:</label>
+     <input type="number" id="edad" name="edad" size="20" min="18" max="99">
+     <label for="Sexo">Sexo:</label>
       <input type="radio" name="sexo" value="Mujer" checked > Mujer
       <input type="radio" name="sexo" value="Hombre" > Hombre
       <input type="radio" name="sexo" value="No Binario" > No Binario
       <br><br>
-    Seleccion el servicio a realizarse: 
-    <select id="servicio" required>
-    <option value="1">Depilación Láser</option>
-    <option value="2">Estética Facial</option>
-    <option value="3">Masajes</option>
-    <option value="4">Tratamiento Corporal</option>
+    
+    <label for="Servicio">Seleccione el servicio a realizarse:</label>
+    <select id="servicio" name="servivio" required>
+    <option value="Medicina Estética">Medicina Estética</option>
+    <option value="Depilación Definitiva">Depilación Definitiva</option>
+    <option value="Tratamientos Faciales">Tratamientos Faciales</option>
+    <option value="Electroestimulación">Electroestimulación</option>
     </select>
     <br><br>
-    Seleccione el día y la hora en la que desea asistir a nuestra estética: (Lunes a Viernes 09:00 a 18:45 hs)
+    <label for="Fecha y Hora">Seleccione el día y la hora en la que desea asistir a nuestra estética: (Lunes a Viernes 09:00 a 18:45 hs)</label>
     <br><br>
     <input type="date" id= "date" name="turno" min="2022-10-04" max="2022-11-30" format="MM/DD/YYYY" placeholder="MM/DD/YYYY">
     <input type="number" id="time" name="horaTurno" min="9" max="18" value="09">
-    <select name="minutos" id="minutosTurno" required>
-      <option value="1">:00</option>
-      <option value="2">:15</option>
-      <option value="3">:30</option>
-      <option value="3">:45</option> 
+    <select name="minutosTurno" id="minutosTurno">
+      <option value="00">:00</option>
+      <option value="15">:15</option>
+      <option value="30">:30</option>
+      <option value="45">:45</option> 
     </select> hs.
     <br><br>
-    <input type="checkbox" name="recibir_info" checked> Deseo recibir información de las
+    <input type="checkbox" id="recibir_info" name="quiere_recibir_info" checked> Deseo recibir información de las
     promociones semanales.
     <br><br>
     <input type="submit" value="Reservar Turno" id="btn-enviar">
     <input type="Reset" value="Borrar todo">
+    
+    
     </form>
   </div>
-<script src="index.js" defer></script>
+  <script src="formulario.js"></script>
   </body>
 </html>
