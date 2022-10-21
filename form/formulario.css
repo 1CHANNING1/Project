@@ -106,8 +106,7 @@ main{
 }
 
 form{
- 
-  width: 90%;
+  width: 100%;
   height: 450px;
   padding: 1em;
   border: 1px solid gainsboro;
@@ -119,16 +118,40 @@ form{
 
 }
 
-.button {
-  padding-left: 90px; 
+
+#btn-enviar {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+#btn-enviar:hover {
+    opacity: 0.8;
+}
   
-}
+.reset {
+    border: none;
+    padding: 4px;
+    color: black;
+    margin-top: 15px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 11%;
+    font-size: 15px;
 
-button {
-margin-left: 50%;
+} 
 
+.reset:hover {
+    opacity: 0.8;
 }
-    
 
 footer{
     width: 100%;
