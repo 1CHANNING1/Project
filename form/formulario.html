@@ -1,59 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="STYLESHEET" href="formulario.css">
-    <title>Turnos</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Amour Turnos</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="formulario.css">
     
-    
-  </head>
-  <body>
+    <link rel="icon" href="../assets/icon.ico">
   
-  <div id="form">
-    <form class="formulario">
-      <h1 class="formulario_titulo"> Complete el formulario a continuación para reservar su turno:</h1><br>
-      <label for="Nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$">
-      <label for="Email">Email:</label>      
-      <input type="text" id="email" name="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9]+(\.[a-z0-9]+)*(\.[a-z]{2,15})$">
-      <br><br>
-      <label for="Edad">Edad:</label>
-     <input type="number" id="edad" name="edad" size="20" min="18" max="99">
-     <label for="Sexo">Sexo:</label>
-      <input type="radio" name="sexo" value="Mujer" checked > Mujer
-      <input type="radio" name="sexo" value="Hombre" > Hombre
-      <input type="radio" name="sexo" value="No Binario" > No Binario
-      <br><br>
+
+</head>
+<body class="cont">
     
-    <label for="Servicio">Seleccione el servicio a realizarse:</label>
-    <select id="servicio" name="servivio" required>
-    <option value="Medicina Estética">Medicina Estética</option>
-    <option value="Depilación Definitiva">Depilación Definitiva</option>
-    <option value="Tratamientos Faciales">Tratamientos Faciales</option>
-    <option value="Electroestimulación">Electroestimulación</option>
-    </select>
-    <br><br>
-    <label for="Fecha y Hora">Seleccione el día y la hora en la que desea asistir a nuestra estética: (Lunes a Viernes 09:00 a 18:45 hs)</label>
-    <br><br>
-    <input type="date" id= "date" name="turno" min="2022-10-04" max="2022-11-30" format="MM/DD/YYYY" placeholder="MM/DD/YYYY">
-    <input type="number" id="time" name="horaTurno" min="9" max="18" value="09">
-    <select name="minutosTurno" id="minutosTurno">
-      <option value="00">:00</option>
-      <option value="15">:15</option>
-      <option value="30">:30</option>
-      <option value="45">:45</option> 
-    </select> hs.
-    <br><br>
-    <input type="checkbox" id="recibir_info" name="quiere_recibir_info" checked> Deseo recibir información de las
-    promociones semanales.
-    <br><br>
-    <input type="submit" value="Reservar Turno" id="btn-enviar">
-    <input type="Reset" value="Borrar todo">
-    
-    
-    </form>
-  </div>
-  <script src="formulario.js"></script>
-  </body>
+    <header class="header">
+
+       
+        <div class="container__header">	
+
+            <div class="logo">
+                <img src="../assets\logo.png" alt="">
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tratamientos.html">Tratamientos</a></li>
+                        <li><a href="../nosotros.html">Nosotros</a></li>
+                        <li><a href="../contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <i class="fa-solid fa-bars" id="icon_menu"></i>
+            
+            
+        </div>
+
+    </header>
+
+    <main>
+  
+      <div id="form">
+        <form class="formulario">
+          <h1 class="formulario_titulo"> Complete el formulario a continuación para reservar su turno:</h1><br>
+          <label for="Nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$">
+          <label for="Email">Email:</label>      
+          <input type="text" id="email" name="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9]+(\.[a-z0-9]+)*(\.[a-z]{2,15})$">
+          <br><br>
+          <label for="Edad">Edad:</label>
+          <input type="number" id="edad" name="edad" size="20" min="18" max="99">
+          <label for="Sexo">Sexo:</label>
+          <input type="radio" name="sexo" value="Mujer" checked > Mujer
+          <input type="radio" name="sexo" value="Hombre" > Hombre
+          <input type="radio" name="sexo" value="No Binario" > No Binario
+          <br><br>
+        
+          <label for="Servicio">Seleccione el servicio a realizarse:</label>
+          <select id="servicio" name="servivio" required>
+          <option value="Medicina Estética">Medicina Estética</option>
+          <option value="Depilación Definitiva">Depilación Definitiva</option>
+          <option value="Tratamientos Faciales">Tratamientos Faciales</option>
+          <option value="Electroestimulación">Electroestimulación</option>
+          </select>
+          <br><br>
+          <label for="Fecha y Hora">Seleccione el día y la hora en la que desea asistir a nuestra estética: (Lunes a Viernes 09:00 a 18:45 hs)</label>
+          <br><br>
+          <input type="date" id= "date" name="turno" min="2022-10-04" max="2022-11-30" format="MM/DD/YYYY" placeholder="MM/DD/YYYY">
+          <input type="number" id="time" name="horaTurno" min="9" max="18" value="09">
+          <select name="minutosTurno" id="minutosTurno">
+            <option value="00">:00</option>
+            <option value="15">:15</option>
+            <option value="30">:30</option>
+            <option value="45">:45</option> 
+          </select> hs.
+          <br><br>
+          <input type="checkbox" id="recibir_info" name="quiere_recibir_info" checked> Deseo recibir información de las
+          promociones semanales.
+          <br><br>
+          <input type="submit" value="Reservar Turno" id="btn-enviar">
+          <input type="Reset" value="Borrar todo">
+        
+        
+        </form>
+      </div>
+
+    </main>
+
+    <footer>
+
+        <div class="container__footer">
+           
+            <div class="box__footer">
+                <h2>Nuestros servicios</h2>
+                <a href="#">Medicina estética</a>
+                <a href="#">Depilación Definitiva</a>
+                <a href="#">Tratamientos faciales</a>
+                <a href="#">Electroestimulación</a>
+            </div>
+
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="#">Acerca de</a>
+                <a href="#">Trabajos</a>
+                <a href="#">Procesos</a>
+                <a href="#">Servicios</a>              
+            </div>
+
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2022 <br> <b>Amour - Centro de éstetica</b> </br></p>
+        </div>
+    </footer>
+    <script src="formulario.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
 </html>
