@@ -60,23 +60,6 @@ header{
     opacity: 0.8;
 }
 
-.btn__header-register{
-    padding: 14px 50px;
-    border: none;
-    background: #8C52FF;
-    color:white;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background, color, 300ms;
-
-}
-.btn__header-register:hover{
-    background: #d895d8;
-    color:white;
-    border-radius: 5px;
-}
 
 #icon_menu{
     display: none;
@@ -113,7 +96,7 @@ form{
   border-radius: 1em;
   background-color: #8C52FF;
   box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
-  color: gainsboro;
+  color: white;
   text-align: left;
 
 }
