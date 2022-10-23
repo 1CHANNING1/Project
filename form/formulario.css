@@ -47,6 +47,7 @@ header{
 .menu nav ul li{
     list-style: none;
     padding: 0px 20px;
+    
 }
 
 .menu nav ul li a{
@@ -60,7 +61,6 @@ header{
     opacity: 0.8;
 }
 
-
 #icon_menu{
     display: none;
 }
@@ -70,27 +70,18 @@ header{
 main{
     width: 80%;
     max-width: 1200px;
-    height: 100%;
-    max-height: 500px;
+    height: auto;
     
     padding: 20px;
     margin: auto;
     margin-top: 20vh;
     margin-bottom: 10vh;
-   
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    column-gap: 20px;
-    justify-items: center;
-    align-items: center;    
-
-    
 }
 
 form{
   width: 100%;
-  height: 450px;
+  height: 60%;
+  max-height: 1000px;
   padding: 1em;
   border: 1px solid gainsboro;
   border-radius: 1em;
@@ -99,7 +90,18 @@ form{
   color: white;
   text-align: left;
 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
 }
+
+form div{
+    padding-top: 0px;
+    
+}
+
+
 
 
 #btn-enviar {
@@ -120,6 +122,7 @@ form{
 }
   
 .reset {
+    width: 100%;
     border: none;
     padding: 4px;
     color: black;
@@ -127,13 +130,17 @@ form{
     background-color: white;
     text-align: center;
     cursor: pointer;
-    width: 11%;
+    
     font-size: 15px;
 
 } 
 
 .reset:hover {
     opacity: 0.8;
+}
+
+#recibir_hora{
+    width: 100%;
 }
 
 footer{
@@ -203,26 +210,13 @@ footer{
     background-color: white;
 }
 
-
-.wasap{
-    
-    
-    position: fixed;
-    bottom: 10px;
-    right: 5px;    
-}
-.wasap:hover{
-    opacity: 0.9;
-}
-
-
 @media (max-width: 1024px){
 
 
     
   .container__header,
   main{
-      padding: 20px;
+      padding-left: 40px;
   }
 
   #icon_menu{
@@ -230,16 +224,14 @@ footer{
       cursor: pointer;
       font-size: 24px;
   }
-
   .header__register{
-      display: none;
-  }
-
+    display: none;
+}
   .menu{
       height: 0px;
       position: absolute;
       right: 20px;
-      top: 70px;
+      top: 100px;
       overflow: hidden;
       z-index: 10;
       box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
@@ -247,6 +239,7 @@ footer{
   }
 
   .menu nav ul{
+      margin-top: 30px;
       padding: 20px 0px;
       flex-direction: column;
       background: #fff;
@@ -261,13 +254,13 @@ footer{
   }
 
   .text__information-cover h1{
-      font-size: 40px;
-  }
+    font-size: 40px;
+    }
 
-  .text__information-cover p{
-      font-size: 16px;
-  }
-  
+.text__information-cover p{
+    font-size: 16px;
+    }
+
 }
 
 @media screen and (max-width:920px){
@@ -277,9 +270,7 @@ footer{
       width: 100%;
       margin-left: 0;
   }
-  .cover{
-      text-align: center;
-  }
+ 
   .container__footer{
       width: 100%;
       grid-template-columns: repeat (1, 1fr);
