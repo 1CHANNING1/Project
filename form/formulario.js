@@ -1,14 +1,18 @@
-const btnEnviar = document.getElementById('btn-enviar');
-const usuario = document.getElementById('nombre');
-const email = document.getElementById('email');
-const edad = document.getElementById('edad');
-const turno = document.getElementById('date');
+const d = document;
+
+const btnEnviar = d.getElementById('btn-enviar');
+const usuario = d.getElementById('nombre');
+const email = d.getElementById('email');
+const edad = d.getElementById('edad');
+const turno = d.getElementById('date');
+
+function onClick (){
+  window.location.href= "form_thanks-page.html"
+}
 
 
 
-function validar(e) {
-
-  e.preventDefault();
+function validar() {
 
   if (usuario.value === "") {
     alert("Por favor, escribe tu nombre.");
@@ -38,8 +42,9 @@ function validar(e) {
     turno.focus();
     return false;
   } else {
-    window.location.href= "form_thanks-page.html"
+    onClick()
     return true;
+    
   }
 }
 btnSubmit = document.querySelector('[type="submit"]')
