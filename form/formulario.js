@@ -12,8 +12,10 @@ function onClick (){
 
 
 
-function validar() {
+function validar(e) {
+  
 
+  
   if (usuario.value === "") {
     alert("Por favor, escribe tu nombre.");
     usuario.focus();
