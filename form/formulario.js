@@ -6,11 +6,6 @@ const email = d.getElementById('email');
 const edad = d.getElementById('edad');
 const turno = d.getElementById('date');
 
-function onClick (){
-  window.location.href= "form_thanks-page.html"
-}
-
-
 
 function validar(e) {
   
@@ -44,7 +39,6 @@ function validar(e) {
     turno.focus();
     return false;
   } else {
-    onClick()
     return true;
     
   }
