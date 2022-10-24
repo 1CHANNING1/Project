@@ -7,11 +7,11 @@
 ##Índice
 
 
-*[Descripción del proyecto](#descripción-del-proyecto)
+*[Descripción del proyecto](#Descripción-del-Proyecto)
 
 *[Características de la página web](#Características-de-la-página-web)
 
-*[Acceso al proyecto](#acceso-proyecto)
+*[Acceso al proyecto](#Acceso-al-proyecto)
 
 *[Tecnologías utilizadas](#tecnologías-utilizadas)
 
